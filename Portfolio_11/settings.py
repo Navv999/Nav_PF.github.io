@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'Portfolio_11.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.parse(os.environ.get("postgresql://test_db_fv0o_user:XetM9bLKE6r6KPeN5ULJsVe4PEum5uzy@dpg-crfij23gbbvc73c5c23g-a.frankfurt-postgres.render.com/test_db_fv0o"))
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://test_db_fv0o_user:XetM9bLKE6r6KPeN5ULJsVe4PEum5uzy@dpg-crfij23gbbvc73c5c23g-a.frankfurt-postgres.render.com/test_db_fv0o',
+        conn_max_age=600
+    )
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
