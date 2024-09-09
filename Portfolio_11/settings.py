@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gyb=ctdn)i)@07_0+gec6jq(p)%z7lb&ek^bw$33dmo)#+_(va
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','nav-pf-github-io.onrender.com']
 
 
 # Application definition
