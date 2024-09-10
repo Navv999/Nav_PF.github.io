@@ -1,179 +1,569 @@
-{% load static %}
+{%load static%}
 
 <!DOCTYPE html>
-<html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <title>Click</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Click</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'app1/css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'app1/css/vendor.css' %}">
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Scripts -->
-    <script defer src="{% static 'app1/js/modernizr.js' %}"></script>
-    <script defer src="{% static 'app1/js/pace.min.js' %}"></script>
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="{% static 'app1/css/base.css'%}">  
+   <link rel="stylesheet" href="{% static 'app1/css/main.css'%}">
+   <link rel="stylesheet" href="{% static 'app1/css/vendor.css'}">     
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{% static 'app1/images/favicon.png' %}">
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body id="top">
-    <!-- Header -->
-    <header>
-        <div class="row">
-            <div class="top-bar">
-                <a class="menu-toggle" href="#"><span>Menu</span></a>
-                <div class="logo">
-                    <a href="index.html">KARDS</a>
-                </div>
-                <nav id="main-nav-wrap">
-                    <ul class="main-navigation">
-                        {% for item in ["Home", "About", "Resume", "Portfolio", "Services", "Contact"] %}
-                        <li><a class="smoothscroll" href="#{{ item|lower }}" title="">{{ item }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <!-- Intro Section -->
-    <section id="intro">
-        <div class="intro-overlay"></div>
-        <div class="intro-content">
-            <div class="row">
-                <div class="col-twelve">
-                    <h5>Hello, World.</h5>
-                    <h1>Naveen Pal this side!!!</h1>
-                    <p class="intro-position">
-                        <span>Software Engineer</span>
-                        <span>#include&lt;'trying my best'&gt;</span>
-                    </p>
-                    <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
-                </div>
-            </div>
-        </div>
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
 
-        <ul class="intro-social">
-            {% for icon in ['facebook', 'twitter', 'instagram'] %}
-            <li><a href="#"><i class="fa fa-{{ icon }}"></i></a></li>
-            {% endfor %}
-        </ul>
-    </section>
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>About</h5>
-                <h1>Let me introduce myself.</h1>
-                <div class="intro-info">
-                    <img src="{% static 'app1/images/my image.jpg' %}" alt="Naveen's Profile Picture">
-                    <p class="lead">A curious software engineer fascinated with technology, trying to explore as much as possible within a given time frame.</p>
-                </div>
-            </div>
-        </div>
+	   		<div class="logo">
+		         <a href="index.html">KARDS</a>
+		      </div>		      
 
-        <div class="row about-content">
-            <div class="col-six tab-full">
-                <h3>Profile</h3>
-                <p>With a background in R&D and practical software engineering, I bring a blend of curiosity, collaboration, and innovative thinking to the projects I work on...</p>
-                <ul class="info-list">
-                    <li><strong>Fullname:</strong> <span>Naveen Kumar Pal</span></li>
-                    <li><strong>Birth Date:</strong> <span>January 11, 2000</span></li>
-                    <li><strong>Job:</strong> <span>AI Engineer, Costa Cloud (since September 2022)</span></li>
-                    <li><strong>Website:</strong> <span><a href="https://nav-pf-github-io.onrender.com/">https://nav-pf-github-io.onrender.com/</a></span></li>
-                    <li><strong>Email:</strong> <span>naveenpalnkp9@gmail.com</span></li>
-                </ul>
-            </div>
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
+						<li><a class="smoothscroll"  href="#services" title="">Services</a></li>					
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+						<li><a href="styles.html" title="">Style Demo</a></li>				
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
 
-            <div class="col-six tab-full">
-                <h3>Skills</h3>
-                <ul class="skill-bars">
-                    {% for skill, percent in {'C/C++': 80, 'Python': 70, 'Django': 60, 'Machine Learning': 50, 'Computer Vision (SLAM)': 40, 'Generative AI': 40, 'Unreal Engine': 50}.items %}
-                    <li>
-                        <div class="progress percent{{ percent }}"><span>{{ percent }}%</span></div>
-                        <strong>{{ skill }}</strong>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
 
-        <div class="row button-section">
-            <div class="col-twelve">
-                <a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-                <a href="#" title="Download CV" class="button button-primary">Download CV</a>
-            </div>
-        </div>
-    </section>
+   	<div class="intro-overlay"></div>	
 
-    <!-- Resume Section -->
-    <section id="resume" class="grey-section">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>Resume</h5>
-                <h1>More of my credentials.</h1>
-                <p class="lead">An AI engineer with strong R&D skills and a passion for problem-solving.</p>
-            </div>
-        </div>
+   	<div class="intro-content">
+   		<div class="row">
 
-        <div class="row resume-timeline">
-            <div class="col-twelve resume-header">
-                <h2>Projects</h2>
-            </div>
-            <div class="col-twelve">
-                <div class="timeline-wrap">
-                    {% for project in [
-                        {'title': 'Obstacle Avoidance Vehicle', 'desc': 'Arduino-based prototype for object detection and collision avoidance...'},
-                        {'title': 'Heart Disease Prediction Model', 'desc': 'Logistic regression model predicting heart disease based on input parameters...'},
-                        {'title': 'Personal Knowledge Assistant', 'desc': 'RAG chatbot leveraging GPT4All and ChromaDB for efficient information retrieval...'}
-                    ] %}
-                    <div class="timeline-block">
-                        <div class="timeline-ico">
-                            <i class="fa fa-graduation-cap"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h4>{{ project.title }}</h4>
-                            <p>{{ project.desc }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+   			<div class="col-twelve">
 
-        <div class="row resume-timeline">
-            <div class="col-twelve resume-header">
-                <h2>Education</h2>
-            </div>
-            <div class="col-twelve">
-                <div class="timeline-wrap">
-                    {% for edu in [
-                        {'degree': 'Bachelor of Technology', 'dates': 'August 2018 - Present', 'school': 'United College of Engineering and Research, Greater Noida'},
-                        {'degree': 'Senior Secondary', 'dates': '2016 - June 2017', 'school': 'Kendriya Vidyalaya'},
-                        {'degree': 'Higher Secondary', 'dates': '2014 - 2015', 'school': 'Kendriya Vidyalaya'}
-                    ] %}
-                    <div class="timeline-block">
-                        <div class="timeline-ico">
-                            <i class="fa fa-graduation-cap"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h4>{{ edu.degree }}</h4>
-                            <p>{{ edu.school }} <br> {{ edu.dates }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
+	   			<h5>Hello, World.</h5>
+	   			<h1>Naveen Pal this side!!!</h1>
+
+	   			<p class="intro-position">
+	   				<span>An Software Engineer</span>
+	   				<span><#include'<'trying my best'>'</span> 
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">        
+         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About</h5>
+   			<h1>Let me introduce myself.</h1>
+
+   			<div class="intro-info">
+
+   				<img src="{% static 'app1/images/my image.jpg'%}" alt="Profile Picture">
+
+   				<p class="lead">A curious software Engineer fascinated with technology and trying to explore them all in a span of time possible.</p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<h3>Profile</h3>
+   			<p>As a dynamic Software Engineer with a strong background in Research and Development, I bring a unique blend of technical expertise, innovative thinking, and practical problem-solving to every project. My approach is shaped by:
+
+				R&D Experience: My current role has honed my skills in exploring uncharted technological territories, turning cutting-edge concepts into practical solutions.
+				<br>
+				Curiosity-Driven Development: I'm constantly exploring new technologies and methodologies, transforming "what if" questions into innovative applications.
+				<br>
+				Collaborative Innovation: I thrive in team environments, contributing ideas and synergizing with colleagues to achieve breakthrough results.
+				<br>
+				Passion for Problem-Solving: I see challenges as opportunities, approaching each one with enthusiasm and a determination to find effective, often novel solutions.
+				<br>
+				Commitment to Growth: I'm dedicated to continuous learning, staying ahead of industry trends to drive both personal and organizational development.
+				<br>
+				
+				My goal is to contribute to projects that push the boundaries of technology while fostering a culture of innovation and mutual growth. With my blend of R&D experience and software engineering skills, I'm well-equipped to tackle complex challenges and drive technological advancements.
+				I'm excited about the possibility of bringing my research-oriented mindset, technical skills, and fresh perspectives to your team. Let's connect and explore how we can create impactful and innovative software solutions together!</p>
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Naveen Kumar Pal</span>
+   				</li>
+   				<li>
+   					<strong>Birth Date:</strong>
+   					<span>January 11,2000</span>
+   				</li>
+   				<li>
+   					<strong>Job:</strong>
+   					<span>AI Enginner</span>
+					<span>Costa Cloud (september 2022)</span>
+   				</li>
+   				<li>
+   					<strong>Website:</strong>
+   					<span>https://nav-pf-github-io.onrender.com/</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<a href="" target="_blank">https://github.com/Navv999</a>
+   				</li>
+				   <li>
+					<strong>github</strong>
+					<a href="https://github.com/Navv999" target="_blank">https://github.com/Navv999</a>
+				</li>
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+
+
+				<ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent80"><span>80%</span></div>
+				   	<strong>C/C++</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent50"><span>70%</span></div>
+				   	<strong>Python</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent50"><span>60%</span></div>
+				   	<strong>Django</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent30"><span>50%</span></div>
+				   	<strong>Machine Learning</strong>
+				   </li>
+				   <li>
+
+					<div class="progress percent30"><span>40%</span></div>
+				   	<strong>Computer Vision(SLAM)</strong>
+				   </li>
+				   <li>
+
+					<div class="progress percent30"><span>40%</span></div>
+				   	<strong>Generative AI</strong>
+				   </li>
+				   <li>
+
+				   	<div class="progress percent50"><span>50%</span></div>
+				   	<strong>Unreal Engine</strong>
+				   </li>
+
+				</ul> <!-- /skill-bars -->		
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Resume</h5>
+   			<h1>More of my credentials.</h1>
+
+   			<p class="lead">Currently an Software Engineer along with some good R&D skills..Knows how to get work done using ChatGPT.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>MY Projects</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>My Projects</h3>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Obstacle Avoidance vehicle</h4>
+	   					<p>It is an aurduino based prototype which has the capability to detect the objects infront of it and avoid the collison.<br>
+						Major application includes 
+						1-navigating stick for blind person
+					    2-infant safety devices</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Heart disease prediction model</h3>
+
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Heart disease prediction model</h4>
+	   					<p>The heart disease prediction model is my first machine learning based model which takes in certain paramter as input and gives out the percentage of the person having a heart disease
+						<br>
+						Utilized Django to deploy a machine learning model on a website.
+						•Performed EDA on heart disease dataset.
+						•Used Logistic Regression for prediction of heart disease on certain parameters.
+						   </p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+
+				   {% comment %} <div class="timeline-header">
+					<h3>Personal Knowledge Assistant - LLM-powered RAG Chatbot</h3> {% endcomment %}
+
+				</div>
+
+				<div class="timeline-content">
+					<h4>Personal Knowledge Assistant - LLM-powered RAG Chatbot</h4>
+					<p>Developed a Retrieval-Augmented Generation (RAG) chatbot using Python,
+						demonstrating proficiency in advanced NLP techniques and AI application
+						development.
+				 <br>
+				 	•Implemented document processing pipeline with PyMuPDF and NLTK for text
+					extraction and preprocessing from PDF files.
+					<br>
+					•Utilized BERT embeddings and integrated ChromaDB for efficient vector storage
+					and similarity search capabilities.
+					<br>
+					•Leveraged GPT4All, a locally hosted LLM, for generating context-aware responses,
+					showcasing skills in working with state-of-the-art language models.
+					</p>
+				</div>
+
+			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+
+	   				
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+   	
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Bachelor of Technology</h3>
+	   					<p>August 2018 to Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>United College of Engineering and Research, Greater Noida</h4>
+	   					<p>My college is affiliated with Dr.A.P.J Abdul kalam Technical University.<br>
+							Passed with 8.0 CGPA.
+										
+						   </p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Senior Secondary</h3>
+	   					<p>2016 - June 2017</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Kendriya Vidyalaya </h4>
+	   					<p>I Passed my 12th in 2017<sup>th</sup>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Higher Secondary</h3>
+	   					<p>May 2014 - June 2015</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Kendriya Vidyalaya</h4>
+	   					<p>Passed my 10<sup>th</sup> with a percentage of 81% with subjects Math,Social Studies, Hindi, English.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+		
+	</section> <!-- /features -->
+
+
+	
+
+
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead">Feel free to contact me it'll just take a minute. </p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+   	<div class="row contact-form">
+
+   		<div class="col-twelve">
+
+            <!-- form -->
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
+
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>                       
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	               </div>                      
+                 <div class="form-field">
+                     <button class="submitform">Submit</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning">            	
+            </div>            
+            <!-- contact-success -->
+      		<div id="message-success">
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+      		</div>
+
+         </div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /contact-form -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Where to find me</h5>
+
+   			<p>
+            Delhi
+            </p>
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Call Me At</h5>
+
+   			<p>
+			   	Mobile: 7355282435
+			    
+			   </p>
+
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>####</span> 
+		        	<span>Design by <a href="#">styleshout</a></span>	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="{% static 'app1/js/jquery-2.1.3.min.js'%}"></script>
+   <script src="{% static 'app1/js/plugins.js'%}"></script>
+   <script src="{%static 'app1/js/main.js'%}"></script>
+
 </body>
+
 </html>
