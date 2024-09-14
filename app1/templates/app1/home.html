@@ -80,7 +80,8 @@
 
 	   			<p class="intro-position">
 	   				<span>An Software Engineer</span>
-	   				<span><#include'<'trying my best'>'</span> 
+	   				<span><#include'<'trying my best'>'</span>
+					   <span>import Curiosity</span> 
 	   			</p>
 
 	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
@@ -124,21 +125,16 @@
    		<div class="col-six tab-full">
 
    			<h3>Profile</h3>
-   			<p>As a dynamic Software Engineer with a strong background in Research and Development, I bring a unique blend of technical expertise, innovative thinking, and practical problem-solving to every project. My approach is shaped by:
+   			<p>As a dynamic Software Engineer with a strong R&D background, I blend technical expertise with innovative thinking. My approach is characterized by:
 
-				R&D Experience: My current role has honed my skills in exploring uncharted technological territories, turning cutting-edge concepts into practical solutions.
-				<br>
-				Curiosity-Driven Development: I'm constantly exploring new technologies and methodologies, transforming "what if" questions into innovative applications.
-				<br>
-				Collaborative Innovation: I thrive in team environments, contributing ideas and synergizing with colleagues to achieve breakthrough results.
-				<br>
-				Passion for Problem-Solving: I see challenges as opportunities, approaching each one with enthusiasm and a determination to find effective, often novel solutions.
-				<br>
-				Commitment to Growth: I'm dedicated to continuous learning, staying ahead of industry trends to drive both personal and organizational development.
-				<br>
+				Transforming cutting-edge concepts into practical solutions
+				Curiosity-driven development, exploring new technologies
+				Collaborative innovation in team environments
+				Passion for solving complex challenges
+				Commitment to continuous learning and growth
 				
-				My goal is to contribute to projects that push the boundaries of technology while fostering a culture of innovation and mutual growth. With my blend of R&D experience and software engineering skills, I'm well-equipped to tackle complex challenges and drive technological advancements.
-				I'm excited about the possibility of bringing my research-oriented mindset, technical skills, and fresh perspectives to your team. Let's connect and explore how we can create impactful and innovative software solutions together!</p>
+				I aim to contribute to projects that push technological boundaries while fostering innovation. With my research-oriented mindset and software engineering skills, I'm ready to tackle complex challenges and drive advancements in your team.
+				Let's connect and create impactful, innovative software solutions together!</p>
 
    			<ul class="info-list">
    				<li>
@@ -218,7 +214,7 @@
    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+   			<a href="{% static 'app1/docs/resume.pdf' %}" download="Resume.pdf" title="Download CV" class="button button-primary">Download CV</a>
    		</div>   		
    	</div>
 
@@ -239,100 +235,94 @@
 
    		</div>   		
    	</div> <!-- /section-intro--> 
+	   <div class="row resume-timeline">
 
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>MY Projects</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>My Projects</h3>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Obstacle Avoidance vehicle</h4>
-	   					<p>It is an aurduino based prototype which has the capability to detect the objects infront of it and avoid the collison.<br>
-						Major application includes 
-						1-navigating stick for blind person
-					    2-infant safety devices</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Heart disease prediction model</h3>
-
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Heart disease prediction model</h4>
-	   					<p>The heart disease prediction model is my first machine learning based model which takes in certain paramter as input and gives out the percentage of the person having a heart disease
-						<br>
-						Utilized Django to deploy a machine learning model on a website.
-						•Performed EDA on heart disease dataset.
-						•Used Logistic Regression for prediction of heart disease on certain parameters.
-						   </p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
+		<div class="col-twelve resume-header">
+		   <h2>MY Projects</h2>
+		</div> <!-- /resume-header -->
+	 
+		<div class="col-twelve">
+		   <div class="timeline-wrap">
 
 
-				   {% comment %} <div class="timeline-header">
-					<h3>Personal Knowledge Assistant - LLM-powered RAG Chatbot</h3> {% endcomment %}
 
-				</div>
-
-				<div class="timeline-content">
-					<h4>Personal Knowledge Assistant - LLM-powered RAG Chatbot</h4>
-					<p>Developed a Retrieval-Augmented Generation (RAG) chatbot using Python,
-						demonstrating proficiency in advanced NLP techniques and AI application
-						development.
-				 <br>
-				 	•Implemented document processing pipeline with PyMuPDF and NLTK for text
-					extraction and preprocessing from PDF files.
-					<br>
-					•Utilized BERT embeddings and integrated ChromaDB for efficient vector storage
-					and similarity search capabilities.
-					<br>
-					•Leveraged GPT4All, a locally hosted LLM, for generating context-aware responses,
-					showcasing skills in working with state-of-the-art language models.
+				<!-- Personal Knowledge Assistant - LLM-powered RAG Chatbot -->
+				<div class="timeline-block">
+					<div class="timeline-ico">
+					   <i class="fa fa-graduation-cap"></i>
+					</div>
+		
+					<div class="timeline-header">
+					   <h3>Personal Knowledge Assistant</h3>
+					</div>
+		
+					<div class="timeline-content">
+					   <h4>LLM-powered RAG Chatbot</h4>
+					   <p>Developed a Retrieval-Augmented Generation (RAG) chatbot using Python, demonstrating proficiency in advanced NLP techniques and AI application development.
+						  <ul>
+							 <li>Implemented document processing pipeline with PyMuPDF and Spacy for text extraction and preprocessing from PDF files.</li>
+							 <li>Utilized BERT embeddings and integrated ChromaDB for efficient vector storage and similarity search capabilities.</li>
+							 <li>Leveraged GPT4All, a locally hosted LLM, for generating context-aware responses, showcasing skills in working with state-of-the-art language models.</li>
+						  </ul>
+						  Check out my app: 
+						  <a href="https://customized-knowledge-assistant-ckaarpzmdhmalfehahiizn.streamlit.app" target="_blank">
+							 Streamlit App
+						  </a>
+					   </p>
+					</div>
+				 </div> <!-- /timeline-block -->
+	 
+			  <!-- Obstacle Avoidance Vehicle -->
+			  <div class="timeline-block">
+				 <div class="timeline-ico">
+					<i class="fa fa-graduation-cap"></i>
+				 </div>
+	 
+				 <div class="timeline-header">
+					<h3>Obstacle Avoidance Vehicle</h3>
+				 </div>
+	 
+				 <div class="timeline-content">
+					<h4>Arduino-based Prototype</h4>
+					<p>It is an Arduino-based prototype capable of detecting objects in front of it and avoiding collisions.<br>
+					   Major applications include:
+					   <ul>
+						  <li>Navigating stick for the blind</li>
+						  <li>Infant safety devices</li>
+					   </ul>
 					</p>
-				</div>
-
-			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-
-	   				
-   			</div> <!-- /timeline-wrap -->   			
-
-   		</div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /resume-timeline -->
+				 </div>
+			  </div> <!-- /timeline-block -->
+	 
+			  <!-- Heart Disease Prediction Model -->
+			  <div class="timeline-block">
+				 <div class="timeline-ico">
+					<i class="fa fa-graduation-cap"></i>
+				 </div>
+	 
+				 <div class="timeline-header">
+					<h3>Heart Disease Prediction Model</h3>
+				 </div>
+	 
+				 <div class="timeline-content">
+					<h4>Machine Learning-Based Model</h4>
+					<p>The heart disease prediction model is my first machine learning-based project that predicts the likelihood of heart disease based on input parameters.
+					   <br>
+					   <strong>Technologies used:</strong> Django, Logistic Regression
+					   <ul>
+						  <li>Performed EDA on the heart disease dataset.</li>
+						  <li>Used Logistic Regression for prediction on certain parameters.</li>
+					   </ul>
+					</p>
+				 </div>
+			  </div> <!-- /timeline-block -->
+	 
+			  
+	 
+		   </div> <!-- /timeline-wrap -->
+		</div> <!-- /col-twelve -->
+	 </div> <!-- /resume-timeline -->
+	 
    	
    	<div class="row resume-timeline">
 
